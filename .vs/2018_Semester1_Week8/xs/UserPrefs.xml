@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{AA76FB51-166A-4E2C-99EF-4F2F0582AA4A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OAuthExampleMac/Startup.cs">
+    <Files>
+      <File FileName="OAuthExampleMac/appsettings.json" Line="3" Column="105" />
+      <File FileName="OAuthExampleMac/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="OAuthExampleMac/bundleconfig.json" Line="1" Column="1" />
+      <File FileName="OAuthExampleMac/Program.cs" Line="1" Column="1" />
+      <File FileName="OAuthExampleMac/Startup.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MvcMovie PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.OAuthExampleMac PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
