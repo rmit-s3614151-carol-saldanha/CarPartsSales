@@ -20,3 +20,14 @@
 /Users/carol/Documents/WDT/Assignment2/OAuthExampleMac/obj/Debug/netcoreapp2.0/OAuthExampleMac.AssemblyInfo.cs
 /Users/carol/Documents/WDT/Assignment2/OAuthExampleMac/obj/Debug/netcoreapp2.0/OAuthExampleMac.dll
 /Users/carol/Documents/WDT/Assignment2/OAuthExampleMac/obj/Debug/netcoreapp2.0/OAuthExampleMac.pdb
+/Users/carol/Documents/WDT/Assignment2/Assignment2/bin/Debug/netcoreapp2.0/OAuthExampleMac.deps.json
+/Users/carol/Documents/WDT/Assignment2/Assignment2/bin/Debug/netcoreapp2.0/OAuthExampleMac.runtimeconfig.json
+/Users/carol/Documents/WDT/Assignment2/Assignment2/bin/Debug/netcoreapp2.0/OAuthExampleMac.runtimeconfig.dev.json
+/Users/carol/Documents/WDT/Assignment2/Assignment2/bin/Debug/netcoreapp2.0/OAuthExampleMac.dll
+/Users/carol/Documents/WDT/Assignment2/Assignment2/bin/Debug/netcoreapp2.0/OAuthExampleMac.pdb
+/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/OAuthExampleMac.csprojResolveAssemblyReference.cache
+/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/OAuthExampleMac.csproj.CoreCompileInputs.cache
+/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/OAuthExampleMac.AssemblyInfoInputs.cache
+/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/OAuthExampleMac.AssemblyInfo.cs
+/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/OAuthExampleMac.dll
+/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/OAuthExampleMac.pdb

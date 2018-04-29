@@ -13132,11 +13132,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/carol/Documents/WDT/Assignment2/OAuthExampleMac/OAuthExampleMac.csproj",
-      "projectName": "OAuthExampleMac",
-      "projectPath": "/Users/carol/Documents/WDT/Assignment2/OAuthExampleMac/OAuthExampleMac.csproj",
+      "projectUniqueName": "/Users/carol/Documents/WDT/Assignment2/Assignment2/Assignment2.csproj",
+      "projectName": "Assignment2",
+      "projectPath": "/Users/carol/Documents/WDT/Assignment2/Assignment2/Assignment2.csproj",
       "packagesPath": "/Users/carol/.nuget/packages/",
-      "outputPath": "/Users/carol/Documents/WDT/Assignment2/OAuthExampleMac/obj",
+      "outputPath": "/Users/carol/Documents/WDT/Assignment2/Assignment2/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
