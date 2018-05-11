@@ -22,8 +22,12 @@ namespace OAuthExample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddDbContext<Assignment2Context>(options =>
+                                                      options.UseSqlServer(Configuration.GetConnectionString("Assignment2Context")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
@@ -36,6 +40,22 @@ namespace OAuthExample
             {
                 googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
                 googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+            });
+
+            //services.AddIdentity<ApplicationUser, IdentityRole>()
+            //.AddEntityFrameworkStores<ApplicationDbContext>()
+            //.AddDefaultTokenProviders();
+
+            services.AddAuthentication().AddFacebook(facebookOptions =>
+            {
+                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
+                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+            });
+
+            services.AddAuthentication().AddTwitter(twitterOptions =>
+            {
+                twitterOptions.ConsumerKey = Configuration["Authentication:Twitter:ConsumerKey"];
+                twitterOptions.ConsumerSecret = Configuration["Authentication:Twitter:ConsumerSecret"];
             });
 
             // Add application services.
@@ -60,6 +80,8 @@ namespace OAuthExample
 
             app.UseStaticFiles();
             app.UseAuthentication();
+
+
 
             app.UseMvc(routes =>
             {

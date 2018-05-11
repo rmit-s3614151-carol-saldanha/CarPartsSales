@@ -13120,7 +13120,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.7",
+      "Microsoft.AspNetCore.Authentication.Twitter >= 2.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.2",
+      "Microsoft.Extensions.Configuration.UserSecrets >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3"
     ]
@@ -13136,13 +13138,13 @@
       "projectName": "Assignment2",
       "projectPath": "/Users/carol/Documents/WDT/Assignment2/Assignment2/Assignment2.csproj",
       "packagesPath": "/Users/carol/.nuget/packages/",
-      "outputPath": "/Users/carol/Documents/WDT/Assignment2/Assignment2/obj",
+      "outputPath": "/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/carol/.config/NuGet/NuGet.Config"
+        "/Users/carol/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -13164,25 +13166,32 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.7"
+            "version": "[2.0.7, )"
+          },
+          "Microsoft.AspNetCore.Authentication.Twitter": {
+            "target": "Package",
+            "version": "[2.0.3, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.2"
+            "version": "[2.0.2, )"
+          },
+          "Microsoft.Extensions.Configuration.UserSecrets": {
+            "target": "Package",
+            "version": "[2.0.1, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.3"
+            "version": "[2.0.3, )"
           }
         },
         "imports": [

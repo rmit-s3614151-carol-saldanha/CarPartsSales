@@ -24,7 +24,9 @@
       "Assignment2/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.7",
+          "Microsoft.AspNetCore.Authentication.Twitter": "2.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.2",
+          "Microsoft.Extensions.Configuration.UserSecrets": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.3"
         },

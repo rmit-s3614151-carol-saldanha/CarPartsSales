@@ -1,9 +1,27 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Data/ApplicationDbContext.cs" Line="5" Column="11" />
+      <File FileName="Data/Constants.cs" Line="9" Column="1" />
+      <File FileName="Data/SeedData.cs" Line="1" Column="1" />
+      <File FileName="Models/StoreInventory.cs" Line="19" Column="1" />
+      <File FileName="Models/ApplicationUser.cs" Line="3" Column="11" />
+      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="Models/OwnerInventory.cs" Line="4" Column="30" />
+      <File FileName="Models/Product.cs" Line="3" Column="30" />
+      <File FileName="Models/StockRequest.cs" Line="1" Column="30" />
+      <File FileName="Models/Store.cs" Line="3" Column="30" />
+      <File FileName="Startup.cs" Line="30" Column="129" />
+      <File FileName="appsettings.json" Line="6" Column="19" />
+      <File FileName="Data/Assignment2Context.cs" Line="13" Column="70" />
+      <File FileName="Program.cs" Line="35" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assignment2 PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
