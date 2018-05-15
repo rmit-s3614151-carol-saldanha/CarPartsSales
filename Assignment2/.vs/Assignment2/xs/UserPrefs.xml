@@ -1,20 +1,16 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Data/ApplicationDbContext.cs" Line="5" Column="11" />
-      <File FileName="Data/Constants.cs" Line="9" Column="1" />
-      <File FileName="Data/SeedData.cs" Line="1" Column="1" />
-      <File FileName="Models/StoreInventory.cs" Line="19" Column="1" />
-      <File FileName="Models/ApplicationUser.cs" Line="3" Column="11" />
-      <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
-      <File FileName="Models/OwnerInventory.cs" Line="4" Column="30" />
-      <File FileName="Models/Product.cs" Line="3" Column="30" />
-      <File FileName="Models/StockRequest.cs" Line="1" Column="30" />
-      <File FileName="Models/Store.cs" Line="3" Column="30" />
-      <File FileName="Startup.cs" Line="30" Column="129" />
-      <File FileName="appsettings.json" Line="6" Column="19" />
-      <File FileName="Data/Assignment2Context.cs" Line="13" Column="70" />
-      <File FileName="Program.cs" Line="35" Column="1" />
+      <File FileName="Controllers/CustomerController.cs" Line="16" Column="24" />
+      <File FileName="Controllers/FranchiseController.cs" Line="16" Column="21" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="31" Column="29" />
+      <File FileName="Views/Owner/Owner.cshtml" Line="26" Column="12" />
+      <File FileName="Views/Franchise/Franchise.cshtml" Line="23" Column="8" />
+      <File FileName="Data/SeedData.cs" Line="31" Column="31" />
+      <File FileName="Data/Constants.cs" Line="5" Column="55" />
+      <File FileName="Program.cs" Line="27" Column="1" />
+      <File FileName="Views/Customer/Customer.cshtml" Line="101" Column="1" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

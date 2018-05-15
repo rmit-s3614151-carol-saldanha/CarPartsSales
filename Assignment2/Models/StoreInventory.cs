@@ -5,8 +5,7 @@ namespace OAuthExample.Models
 {
     public class StoreInventory
     {
-        [Key, ForeignKey("Store"),Display(Name = "Store ID")]
-
+        
         public int StoreID { get; set; }
         public Store Store { get; set; }
 

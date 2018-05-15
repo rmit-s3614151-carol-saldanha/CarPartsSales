@@ -2,7 +2,8 @@
 {
     public static class Constants
     {
-        public const string RetailRole = "Retail";
-        public const string WholeSaleRole = "WholeSale";
+        public const string FranchiseRole = "Franchise";
+        public const string CustomerRole = "Customer";
+        public const string Owner = "Owner";
     }
 }

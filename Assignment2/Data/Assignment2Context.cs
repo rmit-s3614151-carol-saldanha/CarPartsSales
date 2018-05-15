@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OAuthExample.Models;
 
-namespace OAuthExample.Models
+namespace OAuthExample.Data
 {
     public class Assignment2Context : DbContext
     {

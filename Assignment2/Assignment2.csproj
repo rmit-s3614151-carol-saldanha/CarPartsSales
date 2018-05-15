@@ -22,4 +22,17 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\Assignment2ContextModelSnapshot.cs" />
+    <Compile Remove="Data\Migrations\Assignment2ContextModelSnapshot.cs" />
+    <Compile Remove="Controllers\FranchiseController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Migrations\Assignment2ContextModelSnapshot.cs" />
+    <Content Include="Data\Migrations\Assignment2ContextModelSnapshot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Owner\" />
+  </ItemGroup>
 </Project>
