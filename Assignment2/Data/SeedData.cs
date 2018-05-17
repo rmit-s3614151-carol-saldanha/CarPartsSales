@@ -28,7 +28,7 @@ namespace OAuthExample.Data
 
             await EnsureUserHasRole(userManager, "carolsaldanha26@gmail.com", Constants.CustomerRole);
             await EnsureUserHasRole(userManager, "s3614151@student.rmit.edu.au", Constants.FranchiseRole);
-            //await EnsureUserHasRole(userManager, "CSaldanha@Panviva.com", Constants.Owner);
+            await EnsureUserHasRole(userManager, "CSaldanha@Panviva.com", Constants.Owner);
 
             using (var context = new Assignment2Context(
                 serviceProvider.GetRequiredService<DbContextOptions<Assignment2Context>>()))

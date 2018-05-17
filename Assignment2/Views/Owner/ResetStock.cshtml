@@ -1,35 +1,94 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@model IEnumerable<OwnerInventory>
+
+@{
+    ViewBag.Title = "Owner Inventory";
+}
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+  <link rel="stylesheet" href="~/css/site.css" />
     
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Reset Stock Level</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</head>
+
+<h2>Owner Inventory</h2>
+
+<form method="get">
+    <p>
+        Product Name: <input name="productName" value="@ViewBag.ProductName" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StockLevel)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Product.Image)
+            </th>
+            <th>
+                Reset Stock
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StockLevel)
+                </td>
+              
+                    
+                <td>
+                <img src="@Url.Content(item.Product.Image)" height="100" width="100" />
+                </td>
+             
+                <td>
+                <div class="container">
+ 
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Reset Stock</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+    
+                <!-- Modal content-->
+                <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Reset Stock Level</h4>
+                </div>
+               <div class="modal-body">
+                  Product ID @Html.DisplayFor(modelItem => item.ProductID) has been reset to 20                 
+               </div>
+               <div class="modal-footer">
+               <button type="button" name="ProdID"  value="@Html.DisplayFor(modelItem => item.ProductID)" class="btn btn-default" data-dismiss="modal">OK</button>
+
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
@@ -37,6 +96,9 @@
   </div>
   
 </div>
-
-</body>
-</html>
+                </td>
+           
+            </tr>
+        }
+    </tbody>
+</table>

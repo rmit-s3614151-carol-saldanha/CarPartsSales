@@ -1,16 +1,17 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Owner/Sidebar.cshtml">
     <Files>
-      <File FileName="Controllers/CustomerController.cs" Line="16" Column="24" />
-      <File FileName="Controllers/FranchiseController.cs" Line="16" Column="21" />
-      <File FileName="Views/Shared/_Layout.cshtml" Line="31" Column="29" />
-      <File FileName="Views/Owner/Owner.cshtml" Line="26" Column="12" />
-      <File FileName="Views/Franchise/Franchise.cshtml" Line="23" Column="8" />
-      <File FileName="Data/SeedData.cs" Line="31" Column="31" />
-      <File FileName="Data/Constants.cs" Line="5" Column="55" />
-      <File FileName="Program.cs" Line="27" Column="1" />
-      <File FileName="Views/Customer/Customer.cshtml" Line="101" Column="1" />
-      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="Controllers/CustomerController.cs" Line="52" Column="1" />
+      <File FileName="Controllers/FranchiseController.cs" Line="1" Column="1" />
+      <File FileName="Models/OwnerInventory.cs" Line="1" Column="1" />
+      <File FileName="Controllers/OwnerController.cs" Line="66" Column="13" />
+      <File FileName="Views/Owner/Owner.cshtml" Line="20" Column="25" />
+      <File FileName="Views/Owner/ResetStock.cshtml" Line="105" Column="1" />
+      <File FileName="Views/Owner/StockReq.cshtml" Line="18" Column="1" />
+      <File FileName="wwwroot/css/sidebar.css" Line="1" Column="1" />
+      <File FileName="Views/Home/Contact.cshtml" Line="18" Column="1" />
+      <File FileName="Views/Owner/Sidebar.cshtml" Line="33" Column="57" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="34" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

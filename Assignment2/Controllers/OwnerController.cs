@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using OAuthExample.Models;
 using OAuthExample.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace OAuthExample.Controllers
 {
+    [Authorize(Roles = Constants.Owner)]
     public class OwnerController : Controller
     {
         private readonly Assignment2Context _context;
@@ -41,6 +43,31 @@ namespace OAuthExample.Controllers
             return View(await query.ToListAsync());
         }
 
-       
+        public async Task<IActionResult> Sidebar(string productName)
+        {
+          
+     
+
+            // Passing a List<OwnerInventory> model object to the View.
+            return View();
+        }
+
+        public async Task<IActionResult> ResetStock(string productName)
+        {
+
+
+
+            // Passing a List<OwnerInventory> model object to the View.
+            return View();
+        }
+
+        public async Task<IActionResult> StockReq(string productName)
+        {
+
+
+
+            // Passing a List<OwnerInventory> model object to the View.
+            return View();
+        }
     }
 }
