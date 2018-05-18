@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 using OAuthExample.Models;
 using OAuthExample.Data;
 using Microsoft.EntityFrameworkCore;
+using OAuthExample.Utility;
+using Microsoft.AspNetCore.Http;
 
 namespace OAuthExample.Controllers
 {
@@ -23,27 +25,71 @@ namespace OAuthExample.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Customer(string productName)
+        public async Task<IActionResult> Home(string productName)
         {
-            // Eager loading the Product table - join between OwnerInventory and the Product table.
-            var query = _context.OwnerInventory.Include(x => x.Product).Select(x => x);
 
-            if (!string.IsNullOrWhiteSpace(productName))
-            {
-                // Adding a where to the query to filter the data.
-                // Note for the first request productName is null thus the where is not always added.
-                query = query.Where(x => x.Product.Name.Contains(productName));
 
-                // Storing the search into ViewBag to populate the textbox with the same value for convenience.
-                ViewBag.ProductName = productName;
-            }
-
-            // Adding an order by to the query for the Product name.
-            query = query.OrderBy(x => x.Product.Name);
 
             // Passing a List<OwnerInventory> model object to the View.
-            return View(await query.ToListAsync());
+            return View();
         }
+
+        public async Task<IActionResult> Customer(
+            string sortOrder, string currentFilter,
+            string searchString, int? page)
+        {
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["StoreSortParm"] = sortOrder == "Store" ? "store_desc" : "Store";
+
+            if (searchString != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewData["CurrentFilter"] = searchString;
+
+
+
+            var query = _context.StoreInventory
+                                .Include(x => x.Product)
+                                .Include(x => x.Store)
+                                .Select(x => x);
+            //var storeID = _context.Store.Where(x=>x.Name.Contains("bourne")).Select(x=>x.StoreID);
+
+
+            if (!string.IsNullOrWhiteSpace(searchString))
+            {
+                query = query.Where(x => x.Product.Name.Contains(searchString));
+
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    query = query.OrderByDescending(s => s.Product.Name);
+                    break;
+                case "Store":
+                    query = query.OrderBy(s => s.Store.Name);
+                    break;
+                case "store_desc":
+                    query = query.OrderByDescending(s => s.Store.Name);
+                    break;
+                default:
+                    query = query.OrderBy(s => s.Product.Name);
+                    break;
+            }
+
+            int pageSize = 3;
+
+            return View(await PaginatedList<StoreInventory>
+                        .CreateAsync(query.AsNoTracking(), page ?? 1, pageSize));
+        }
+
+
 
 
     }

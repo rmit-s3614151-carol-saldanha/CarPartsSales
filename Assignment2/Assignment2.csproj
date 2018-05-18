@@ -26,6 +26,7 @@
     <Compile Remove="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
     <Compile Remove="Migrations\Assignment2ContextModelSnapshot.cs" />
     <Compile Remove="Data\Migrations\Assignment2ContextModelSnapshot.cs" />
+    <Compile Remove="Utility\ShoppingList.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Migrations\Assignment2ContextModelSnapshot.cs" />
