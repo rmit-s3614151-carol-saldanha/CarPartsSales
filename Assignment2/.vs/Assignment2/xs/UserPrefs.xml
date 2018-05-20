@@ -1,17 +1,8 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Customer/Home.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Customer/Cart.cshtml">
     <Files>
-      <File FileName="Controllers/CustomerController.cs" Line="94" Column="13" />
-      <File FileName="Views/Customer/Customer.cshtml" Line="1" Column="1" />
-      <File FileName="Data/Assignment2Context.cs" Line="14" Column="20" />
-      <File FileName="Data/ApplicationDbContext.cs" Line="1" Column="1" />
-      <File FileName="Program.cs" Line="27" Column="1" />
-      <File FileName="Data/SeedData.cs" Line="171" Column="33" />
-      <File FileName="Views/Customer/Cart.cshtml" Line="1" Column="1" />
-      <File FileName="Controllers/OwnerController.cs" Line="114" Column="1" />
-      <File FileName="Views/Owner/Owner.cshtml" Line="52" Column="22" />
-      <File FileName="Views/Owner/ResetStock.cshtml" Line="38" Column="51" />
-      <File FileName="Views/Customer/Home.cshtml" Line="8" Column="103" />
+      <File FileName="Controllers/ShoppingCartController.cs" Line="12" Column="1" />
+      <File FileName="Views/Customer/Cart.cshtml" Line="48" Column="103" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -14,6 +14,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.1" />
+    <PackageReference Include="netfx-System.ServiceProvider" Version="1.2.1" />
+    <PackageReference Include="ServiceProviderExtensions" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,5 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Owner\" />
+    <Folder Include="Data\Interfaces\" />
+    <Folder Include="Models\ShoppingCartViewModels\" />
   </ItemGroup>
 </Project>

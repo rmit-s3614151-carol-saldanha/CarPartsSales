@@ -11,32 +11,15 @@ using System;
 namespace Assignment2.Migrations
 {
     [DbContext(typeof(Assignment2Context))]
-    partial class Assignment2ContextModelSnapshot : ModelSnapshot
+    [Migration("20180520033649_CartItems")]
+    partial class CartItems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.2-rtm-10011")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("OAuthExample.Models.Cart", b =>
-                {
-                    b.Property<int>("ShoppingCartItemID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Amount");
-
-                    b.Property<int?>("ProductID");
-
-                    b.Property<int>("ShoppingCartID");
-
-                    b.HasKey("ShoppingCartItemID");
-
-                    b.HasIndex("ProductID");
-
-                    b.ToTable("ShoppingCartItems");
-                });
 
             modelBuilder.Entity("OAuthExample.Models.OwnerInventory", b =>
                 {
@@ -110,13 +93,6 @@ namespace Assignment2.Migrations
                     b.HasIndex("ProductID");
 
                     b.ToTable("StoreInventory");
-                });
-
-            modelBuilder.Entity("OAuthExample.Models.Cart", b =>
-                {
-                    b.HasOne("OAuthExample.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID");
                 });
 
             modelBuilder.Entity("OAuthExample.Models.OwnerInventory", b =>

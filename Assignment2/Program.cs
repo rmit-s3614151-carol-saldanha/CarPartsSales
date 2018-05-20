@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using OAuthExample.Data;
 
+
 namespace OAuthExample
 {
     public class Program

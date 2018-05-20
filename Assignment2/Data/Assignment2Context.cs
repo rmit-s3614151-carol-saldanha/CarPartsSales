@@ -5,6 +5,8 @@ namespace OAuthExample.Data
 {
     public class Assignment2Context : DbContext
     {
+      
+        public DbSet<Cart> ShoppingCartItems { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<OwnerInventory> OwnerInventory { get; set; }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "96d964db9736f5516afaf64d3f7faffb3db136eb"
+    "signature": "9e693fb63b9052bebf18d11db779cb5fff93eb5c"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,9 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.0.2",
           "Microsoft.Extensions.Configuration.UserSecrets": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.3"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.3",
+          "ServiceProviderExtensions": "1.0.0",
+          "netfx-System.ServiceProvider": "1.2.1"
         },
         "runtime": {
           "Assignment2.dll": {}
@@ -2446,6 +2448,7 @@
           "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
+      "netfx-System.ServiceProvider/1.2.1": {},
       "Newtonsoft.Json/10.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.4.0",
@@ -2686,6 +2689,14 @@
             "rid": "win-x86",
             "assetType": "native"
           }
+        }
+      },
+      "ServiceProviderExtensions/1.0.0": {
+        "runtime": {
+          "lib/net40/ServiceProviderExtensions.dll": {}
+        },
+        "compile": {
+          "lib/net40/ServiceProviderExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.7": {
@@ -5444,6 +5455,13 @@
       "path": "microsoft.win32.registry/4.4.0",
       "hashPath": "microsoft.win32.registry.4.4.0.nupkg.sha512"
     },
+    "netfx-System.ServiceProvider/1.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UZxe8a5IdQY6QBw4u0YEeLz3LdfzbzC5/sz/frBz5xM5dVvquRahRPaUz3s94ZXCVlhfs9CRUIj/WnYoCW58iw==",
+      "path": "netfx-system.serviceprovider/1.2.1",
+      "hashPath": "netfx-system.serviceprovider.1.2.1.nupkg.sha512"
+    },
     "Newtonsoft.Json/10.0.1": {
       "type": "package",
       "serviceable": true,
@@ -5618,6 +5636,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "ServiceProviderExtensions/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sk++yxuJuS2MMPQHB+pR4l/Q1jn7kb1oYS70FDIgG5vd57bhvJRQIHB1lQprE8K0yhnzPLu9WwtY2ER/cIKZyg==",
+      "path": "serviceproviderextensions/1.0.0",
+      "hashPath": "serviceproviderextensions.1.0.0.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_green/1.1.7": {
       "type": "package",

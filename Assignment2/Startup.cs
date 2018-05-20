@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using OAuthExample.Data;
 using OAuthExample.Models;
 using OAuthExample.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace OAuthExample
 {
@@ -17,6 +18,7 @@ namespace OAuthExample
             Configuration = configuration;
         }
 
+    
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -60,8 +62,14 @@ namespace OAuthExample
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
 
             services.AddMvc();
+            services.AddMemoryCache();
+            services.AddSession();
+
+           
         }
 
 
@@ -83,7 +91,7 @@ namespace OAuthExample
             app.UseStaticFiles();
             app.UseAuthentication();
 
-
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

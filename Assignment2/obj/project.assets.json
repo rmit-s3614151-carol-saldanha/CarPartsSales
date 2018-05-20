@@ -2805,6 +2805,9 @@
           }
         }
       },
+      "netfx-System.ServiceProvider/1.2.1": {
+        "type": "package"
+      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -3121,6 +3124,15 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "ServiceProviderExtensions/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ServiceProviderExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ServiceProviderExtensions.dll": {}
         }
       },
       "SQLitePCLRaw.bundle_green/1.1.7": {
@@ -7837,6 +7849,17 @@
         "version.txt"
       ]
     },
+    "netfx-System.ServiceProvider/1.2.1": {
+      "sha512": "UZxe8a5IdQY6QBw4u0YEeLz3LdfzbzC5/sz/frBz5xM5dVvquRahRPaUz3s94ZXCVlhfs9CRUIj/WnYoCW58iw==",
+      "type": "package",
+      "path": "netfx-system.serviceprovider/1.2.1",
+      "files": [
+        "content/netfx/System/ServiceProvider.cs",
+        "netfx-system.serviceprovider.1.2.1.nupkg.sha512",
+        "netfx-system.serviceprovider.nuspec",
+        "tools/netfx-System.ServiceProvider.xml"
+      ]
+    },
     "NETStandard.Library/2.0.0": {
       "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
       "type": "package",
@@ -8293,6 +8316,16 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "ServiceProviderExtensions/1.0.0": {
+      "sha512": "Sk++yxuJuS2MMPQHB+pR4l/Q1jn7kb1oYS70FDIgG5vd57bhvJRQIHB1lQprE8K0yhnzPLu9WwtY2ER/cIKZyg==",
+      "type": "package",
+      "path": "serviceproviderextensions/1.0.0",
+      "files": [
+        "lib/net40/ServiceProviderExtensions.dll",
+        "serviceproviderextensions.1.0.0.nupkg.sha512",
+        "serviceproviderextensions.nuspec"
       ]
     },
     "SQLitePCLRaw.bundle_green/1.1.7": {
@@ -13124,7 +13157,9 @@
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.2",
       "Microsoft.Extensions.Configuration.UserSecrets >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3",
+      "ServiceProviderExtensions >= 1.0.0",
+      "netfx-System.ServiceProvider >= 1.2.1"
     ]
   },
   "packageFolders": {
@@ -13193,6 +13228,14 @@
           "Microsoft.Extensions.Configuration.UserSecrets": {
             "target": "Package",
             "version": "2.0.1"
+          },
+          "netfx-System.ServiceProvider": {
+            "target": "Package",
+            "version": "1.2.1"
+          },
+          "ServiceProviderExtensions": {
+            "target": "Package",
+            "version": "1.0.0"
           }
         },
         "imports": [
@@ -13202,5 +13245,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'ServiceProviderExtensions 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "ServiceProviderExtensions",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
