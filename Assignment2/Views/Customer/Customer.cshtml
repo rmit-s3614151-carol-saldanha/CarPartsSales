@@ -57,7 +57,9 @@
             
             
                 <td>
-                    <a asp-action="Buy" asp-route-storeid="@item.StoreID" asp-route-id="@item.ProductID">Add to cart</a>
+                    <button type="button" class="btn btn-default btn-sm">
+                     <span class="glyphicon glyphicon-shopping-cart" onclick='window.location = "@Url.Action("Customer", "Customer")";'></span> Add to Cart
+                     </button>
                 </td>
              </tr>
         }
@@ -82,3 +84,10 @@
    class="btn btn-default @nextDisabled">
    Next
 </a>
+<style>
+    .btn-default {
+    color: beige;
+    background-color: teal;
+    border-color: #ccc;
+}
+</style>

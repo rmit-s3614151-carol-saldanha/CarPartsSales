@@ -90,7 +90,10 @@ namespace OAuthExample.Controllers
         }
 
 
-
+        public async Task<IActionResult> Cart(){
+            
+            return View();
+        }
 
     }
 }
