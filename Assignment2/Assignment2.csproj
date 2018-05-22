@@ -29,6 +29,10 @@
     <Compile Remove="Migrations\Assignment2ContextModelSnapshot.cs" />
     <Compile Remove="Data\Migrations\Assignment2ContextModelSnapshot.cs" />
     <Compile Remove="Utility\ShoppingList.cs" />
+    <Compile Remove="Data\DatabaseContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Customer\Cart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Migrations\Assignment2ContextModelSnapshot.cs" />
@@ -36,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Owner\" />
-    <Folder Include="Data\Interfaces\" />
     <Folder Include="Models\ShoppingCartViewModels\" />
+    <Folder Include="Models\Interfaces\" />
+    <Folder Include="Models\Repositories\" />
+    <Folder Include="Views\ShoppingCart\" />
   </ItemGroup>
 </Project>

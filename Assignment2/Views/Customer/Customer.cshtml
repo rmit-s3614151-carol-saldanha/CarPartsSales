@@ -19,6 +19,9 @@
     <thead>
         <tr>
             <th>
+                Product Id
+            </th>
+            <th>
                 <a asp-action="Customer" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Product Name</a>
             </th>
             <th>
@@ -30,6 +33,9 @@
             <th>
                 Price
             </th>
+            <th>
+                Quantity
+            </th>
               <th>
                 Image
            </th>
@@ -39,26 +45,40 @@
     <tbody>        
         @foreach(var item in Model) {
             <tr>
+              <td>
+                    @Html.DisplayFor(modelItem => item.Product.ProductID)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Product.Name)
                 </td>
+              
                 <td>
                     @Html.DisplayFor(modelItem => item.Store.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.StockLevel)
                 </td>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.Product.Price)
                 </td>
-                 <td>
+               
+               <td>
+               <form method="get">
+                    @Html.DropDownListFor(modelItem => item.StockLevel, Enumerable.Range(1, item.StockLevel).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }))
+
+               </form>
+
+               </td>
+           
+                <td>
                 <img src="@Url.Content(item.Product.Image)" height="100" width="100" />
                 </td>
             
             
                 <td>
-                    <button type="button" class="btn btn-default btn-sm">
-                     <span class="glyphicon glyphicon-shopping-cart" onclick='window.location = "@Url.Action("AddToShoppingCart", "ShoppingCart")";'></span> Add to Cart
+                    <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("AddToShoppingCart", "ShoppingCart", new { productId = item.Product.ProductID })";'>
+                     <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
                      </button>
                 </td>
              </tr>

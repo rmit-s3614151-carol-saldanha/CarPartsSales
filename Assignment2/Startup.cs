@@ -8,6 +8,8 @@ using OAuthExample.Data;
 using OAuthExample.Models;
 using OAuthExample.Services;
 using Microsoft.AspNetCore.Http;
+using OAuthExample.Models.Interfaces;
+using OAuthExample.Data.Repositories;
 
 namespace OAuthExample
 {
@@ -62,6 +64,7 @@ namespace OAuthExample
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IProductRepository, ProductRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
 

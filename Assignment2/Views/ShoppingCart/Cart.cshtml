@@ -1,0 +1,72 @@
+﻿@model ShoppingCartViewModel
+
+
+<div class="row checkoutForm">
+    <h2>Your shopping cart</h2>
+    <h4>Here are the products in your shopping cart.</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+
+                <th class="text-center">Product ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Image</th>
+
+                <th class="text-center">Price</th>
+                <th class="text-center">Selected amount</th>
+                <th class="text-center">Subtotal</th>
+                <th class="text-center">Remove from cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+            {
+                <tr>
+
+                    <td class="text-center">@line.Product.ProductID</td>
+                    <td class="text-center">@line.Product.Name</td>
+                    <td>
+                    <img class="center" src="@Url.Content(@line.Product.Image)" height="200" width="200" />
+                    </td>
+                    <td class="text-center">@line.Product.Price.ToString("c")</td>
+                    <td class="text-center">@line.Amount</td>
+                    <td class="text-center">
+                        @((line.Product.Price).ToString("c"))
+                    </td>
+                    <td>
+                     <button type="button" class="glyphicon glyphicon-remove text-danger remove" onclick='window.location = "@Url.Action("RemoveFromShoppingCart", "ShoppingCart", new { productId = line.Product.ProductID})";'>
+                     </button>
+                    </td>
+
+
+
+                
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Total:</td>
+                <td class="text-right">
+                    @Model.ShoppingCartTotal.ToString("c")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-right">
+        <div class="btn-group " >
+            <a class="btn btn-default" asp-controller="Order" asp-action="Checkout">Check out</a>
+            <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("Customer", "Customer")";'>
+                     <span class="glyphicon glyphicon-shopping-cart"></span> Add More Products
+                     </button>
+        </div>
+    </div>
+</div>
+<style>
+    .btn-default {
+    color: beige;
+    background-color: teal;
+    border-color: #ccc;
+}
+</style>

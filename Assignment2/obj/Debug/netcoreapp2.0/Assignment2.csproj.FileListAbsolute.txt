@@ -9,3 +9,4 @@
 /Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/Assignment2.AssemblyInfo.cs
 /Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/Assignment2.dll
 /Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/Assignment2.pdb
+/Users/carol/Documents/WDT/Assignment2/Assignment2/obj/Debug/netcoreapp2.0/Assignment2.csprojResolveAssemblyReference.cache

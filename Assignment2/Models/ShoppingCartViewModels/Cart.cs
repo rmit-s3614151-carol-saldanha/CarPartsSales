@@ -13,6 +13,6 @@ namespace OAuthExample.Models
 
         public double Amount { get; set; }
 
-        public int ShoppingCartID { get; set; }
+        public string ShoppingCartID { get; set; }
     }
 }

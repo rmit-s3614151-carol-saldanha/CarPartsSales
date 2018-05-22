@@ -44,19 +44,19 @@ namespace OAuthExample.Models
             
         }
 
-        public void AddToCart(Product product, int amount)
+        public void AddToCart(Product product, double amount)
         {
             var shoppingCartItem =
                 _context.ShoppingCartItems.SingleOrDefault(
-                    s => s.Product.ProductID == product.ProductID && s.ShoppingCartID.ToString() == ShoppingCartId );
+                    s => s.Product.ProductID == product.ProductID && s.ShoppingCartID == ShoppingCartId );
 
             if (shoppingCartItem == null)
             {
                 shoppingCartItem = new Cart
                 {
-                    ShoppingCartID = Convert.ToInt32(ShoppingCartId),
+                    ShoppingCartID = ShoppingCartId,
                     Product = product,
-                    Amount = product.Price
+                    Amount = amount
                 };
 
                 _context.ShoppingCartItems.Add(shoppingCartItem);
@@ -72,7 +72,7 @@ namespace OAuthExample.Models
         {
             var shoppingCartItem =
                   _context.ShoppingCartItems.SingleOrDefault(
-                      s => s.Product.ProductID == product.ProductID && s.ShoppingCartID.ToString() == ShoppingCartId);
+                      s => s.Product.ProductID == product.ProductID && s.ShoppingCartID == ShoppingCartId);
 
             double localAmount = 0;
 
@@ -98,7 +98,7 @@ namespace OAuthExample.Models
         {
             return ShoppingCartItems ??
                    (ShoppingCartItems =
-                    _context.ShoppingCartItems.Where(c => c.ShoppingCartID.ToString() == ShoppingCartId)
+                    _context.ShoppingCartItems.Where(c => c.ShoppingCartID == ShoppingCartId)
                     .Include(s => s.Product)
                            .ToList());
         }
@@ -107,7 +107,7 @@ namespace OAuthExample.Models
         {
             var cartItems = _context
                 .ShoppingCartItems
-                .Where(c => c.ShoppingCartID.ToString() == ShoppingCartId);
+                .Where(c => c.ShoppingCartID == ShoppingCartId);
 
             _context.ShoppingCartItems.RemoveRange(cartItems);
 
@@ -116,8 +116,8 @@ namespace OAuthExample.Models
 
         public double GetShoppingCartTotal()
         {
-            var total = _context.ShoppingCartItems.Where(c => c.ShoppingCartID.ToString() == ShoppingCartId)
-                                .Select(c => c.Product.Price * c.Amount).Sum();
+            var total = _context.ShoppingCartItems.Where(c => c.ShoppingCartID == ShoppingCartId)
+                                .Select(c => c.Product.Price).Sum();
             return total;
         }
     }

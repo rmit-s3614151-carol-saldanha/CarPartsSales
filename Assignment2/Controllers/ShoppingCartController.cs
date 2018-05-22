@@ -9,8 +9,8 @@ using OAuthExample.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Assignment2.Data.Interfaces;
-using Assignment2.Models.ShoppingCartViewModels;
+using OAuthExample.Models.Interfaces;
+using OAuthExample.Models.ShoppingCartViewModels;
 
 namespace OAuthExample.Controllers
 {
@@ -43,22 +43,23 @@ namespace OAuthExample.Controllers
         //[Authorize]
         public RedirectToActionResult AddToShoppingCart(int productId)
         {
-            var selectedProduct = _productRepository.Products.FirstOrDefault(p => p.ProductID == productId);
+            var selectedProduct = _productRepository.GetProductById(productId);
+
             if (selectedProduct != null)
             {
-                _shoppingCart.AddToCart(selectedProduct, 1);
+                _shoppingCart.AddToCart(selectedProduct, 2);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Cart");
         }
 
         public RedirectToActionResult RemoveFromShoppingCart(int productId)
         {
-            var selectedDrink = _productRepository.Products.FirstOrDefault(p => p.ProductID == productId);
-            if (selectedDrink != null)
+            var selectedProduct = _productRepository.GetProductById(productId);
+            if (selectedProduct != null)
             {
-                _shoppingCart.RemoveFromCart(selectedDrink);
+                _shoppingCart.RemoveFromCart(selectedProduct);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Cart");
         }
         //public async Task<IActionResult> Cart(string productName)
         //{

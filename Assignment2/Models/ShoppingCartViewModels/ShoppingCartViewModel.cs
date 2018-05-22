@@ -1,6 +1,6 @@
 ﻿using System;
 using OAuthExample.Models;
-namespace Assignment2.Models.ShoppingCartViewModels
+namespace OAuthExample.Models.ShoppingCartViewModels
 {
     public class ShoppingCartViewModel
     {
