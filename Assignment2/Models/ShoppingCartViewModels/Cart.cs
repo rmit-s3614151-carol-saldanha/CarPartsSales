@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OAuthExample.Models
+namespace OAuthExample.Models.ShoppingCartViewModels
 {
     public class Cart
     {
@@ -14,5 +14,6 @@ namespace OAuthExample.Models
         public double Amount { get; set; }
 
         public string ShoppingCartID { get; set; }
+
     }
 }

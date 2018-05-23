@@ -11,9 +11,10 @@ using System;
 namespace Assignment2.Migrations
 {
     [DbContext(typeof(Assignment2Context))]
-    partial class Assignment2ContextModelSnapshot : ModelSnapshot
+    [Migration("20180522115245_Order")]
+    partial class Order
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

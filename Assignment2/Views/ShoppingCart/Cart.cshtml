@@ -56,10 +56,13 @@
 
     <div class="text-right">
         <div class="btn-group " >
-            <a class="btn btn-default" asp-controller="Order" asp-action="Checkout">Check out</a>
-            <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("Customer", "Customer")";'>
+            <button type="button" class="btn btn-default" asp-controller="Order" asp-action="Checkout">
+                    <span class="glyphicon glyphicon-check"></span> Checkout
+                     </button>
+            <button type="button" class="btn btn-default" onclick='window.location = "@Url.Action("Customer", "Customer")";'>
                      <span class="glyphicon glyphicon-shopping-cart"></span> Add More Products
                      </button>
+
         </div>
     </div>
 </div>

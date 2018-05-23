@@ -1,0 +1,84 @@
+﻿@model IOrderHistoryRepository
+
+@{
+    ViewBag.Title = "Magic e-commerce";
+}
+
+<h2>Magic Orders</h2>  
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Receipt ID
+            </th>
+            <th>
+                Email address
+            </th>
+            <th>
+                Transaction time
+            </th>
+        </tr>
+    </thead>
+    <tbody>        
+        @foreach(var item in Model.customerOrders) {
+
+            string selectedRow = "";
+            if (item.ReceiptID == (int?)ViewData["ReceiptID"])
+            {
+                selectedRow = "success";
+            }
+        
+            <tr class="@selectedRow">
+               <td>
+                    @Html.DisplayFor(modelItem => item.ReceiptID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                <a asp-action="Index" asp-route-id="@item.ReceiptID">Select</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.orderHistories != null)
+{
+    <h3>Products Order with the Receipt</h3>
+    <table class="table">
+        <tr>
+            <th>Product Name</th>
+            <th>Store Name</th>
+            <th>Quantity</th>
+            <th> Total Price</th>
+        </tr>
+
+        @foreach (var item in Model.orderHistories)
+        {
+            <tr>
+                <td>
+                    @item.ProductName
+                </td>
+                <td>
+                    @item.StoreName
+                </td>
+                <td>
+                    @item.Quantity
+                </td>
+                <td>
+                    @item.TotalPrice
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+
+
+
