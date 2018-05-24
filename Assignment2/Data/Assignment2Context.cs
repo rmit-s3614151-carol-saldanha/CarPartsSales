@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OAuthExample.Models;
+using OAuthExample.Models.OwnerInventory;
 using OAuthExample.Models.ShoppingCartViewModels;
 
 namespace OAuthExample.Data

@@ -1,0 +1,29 @@
+﻿@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Home Page";
+
+
+
+}
+
+
+<div class="card">
+  <img src="~/images/avatar.png" alt="John" style="width:100%">
+  <h4>@UserManager.GetUserName(User)</h4>
+  <p class="title">Owner</p>
+
+
+</div>
+
+<div class="menu">
+        <h1> Owner Menu </h1>
+        <ul>
+            <li><a asp-area="" asp-controller="Owner" asp-action="Index"> Display Owner Inventory</a></li>
+            <li><a asp-area="" asp-controller="Owner" asp-action="DisplayRequests"> Display Stock Request</a></li>
+            <li><a asp-area="" asp-controller="StockRequest" asp-action="Index"> Process stock request</a></li>
+            <li><a asp-area="" asp-controller="Owner" asp-action=""> Set Owner Inventory Item Stock</a></li>
+           
+        </ul>
+ 
+</div>

@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\Customer\Cart.cshtml" />
+    <Content Remove="Views\Owner\ResetStock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Migrations\Assignment2ContextModelSnapshot.cs" />

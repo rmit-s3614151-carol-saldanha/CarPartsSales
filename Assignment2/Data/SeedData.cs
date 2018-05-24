@@ -6,6 +6,7 @@ using OAuthExample.Models;
 using Microsoft.EntityFrameworkCore;
 
 using System.Linq;
+using OAuthExample.Models.OwnerInventory;
 
 namespace OAuthExample.Data
 {

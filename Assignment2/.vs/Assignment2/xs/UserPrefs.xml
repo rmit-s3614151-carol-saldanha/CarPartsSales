@@ -1,18 +1,10 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/ShoppingCartViewModels/Cart.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Owner/Owner.cshtml">
     <Files>
-      <File FileName="Models/ShoppingCart.cs" Line="17" Column="6" />
-      <File FileName="Controllers/OrderHistoryController.cs" Line="68" Column="50" />
-      <File FileName="Data/Assignment2Context.cs" Line="3" Column="50" />
-      <File FileName="Views/CustomerOrder/Index.cshtml" Line="24" Column="50" />
-      <File FileName="Controllers/OrderHistoryAPIController.cs" Line="29" Column="9" />
-      <File FileName="Controllers/CustomerOrderController.cs" Line="32" Column="109" />
-      <File FileName="Models/CustomerOrder.cs" Line="12" Column="23" />
-      <File FileName="Models/Interfaces/IOrderHistoryRepository.cs" Line="5" Column="11" />
-      <File FileName="Models/OrderHistory.cs" Line="9" Column="32" />
-      <File FileName="Models/ShoppingCartViewModels/Cart.cs" Line="14" Column="40" />
-      <File FileName="Models/Store.cs" Line="1" Column="1" />
-      <File FileName="Models/ShoppingCartViewModels/ShoppingCartViewModel.cs" Line="3" Column="1" />
+      <File FileName="Views/Owner/DisplayRequests.cshtml" Line="1" Column="20" />
+      <File FileName="Views/Owner/Owner.cshtml" Line="70" Column="15" />
+      <File FileName="Controllers/OwnerController.cs" Line="146" Column="46" />
+      <File FileName="Views/Customer/Customer.cshtml" Line="80" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
