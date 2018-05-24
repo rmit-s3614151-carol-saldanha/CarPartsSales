@@ -24,6 +24,9 @@
                <th>
                 @Html.DisplayNameFor(model => model.StoreID)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product.Image)
+            </th>
            
         </tr>
     </thead>
@@ -41,6 +44,10 @@
             </td>
               <td>
                 @Html.DisplayFor(modelItem => item.StoreID)
+            </td>
+            <td>
+                <img src="@Url.Content(item.Product.Image)" height="100" width="100" />
+
             </td>
         </tr>
 }

@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Owner/Owner.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Owner/Dashboard.cshtml">
     <Files>
       <File FileName="Views/Owner/DisplayRequests.cshtml" Line="1" Column="20" />
-      <File FileName="Views/Owner/Owner.cshtml" Line="70" Column="15" />
+      <File FileName="Views/Owner/Owner.cshtml" Line="83" Column="9" />
       <File FileName="Controllers/OwnerController.cs" Line="146" Column="46" />
-      <File FileName="Views/Customer/Customer.cshtml" Line="80" Column="18" />
+      <File FileName="Views/Customer/Customer.cshtml" Line="114" Column="1" />
+      <File FileName="Views/Owner/Edit.cshtml" Line="58" Column="9" />
+      <File FileName="Views/Owner/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Owner/Dashboard.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

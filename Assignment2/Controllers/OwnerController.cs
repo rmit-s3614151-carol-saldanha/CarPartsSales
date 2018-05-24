@@ -93,7 +93,7 @@ namespace OAuthExample.Controllers
                 return View(ownerInventory);
             }
       
-        public async Task<IActionResult> DisplayRequests()
+        public async Task<IActionResult> StockRequest()
         {
             var applicationDbContext = _context.StockRequests.Include(x => x.Product).Select(x => x);
             return View(await applicationDbContext.ToListAsync());
