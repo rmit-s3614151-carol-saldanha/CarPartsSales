@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using OAuthExample.Models;
 
-namespace OAuthExample.Models.OwnerInventory
+namespace OAuthExample
 {
     public class OwnerInventory
     {

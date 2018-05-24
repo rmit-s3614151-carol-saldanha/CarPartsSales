@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Car Parts Sales</title>
+    <title>@ViewData["Title"] - Car Sales</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -29,14 +29,7 @@
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Car Sales</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Owner" asp-action="Owner">Owner</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="Franchise" asp-action="Franchise">Franchise</a></li>
-                    <li><a asp-area="" asp-controller="Customer" asp-action="Home">Customer</a></li>
-                </ul>
+                @await Html.PartialAsync("_UserManagerPartial")
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>

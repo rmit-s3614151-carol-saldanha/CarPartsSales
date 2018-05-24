@@ -17,12 +17,13 @@
     
 </head>
 
-<h2>Owner Inventory</h2>
+<h1>Owner Inventory</h1>
 
 <form method="get">
     <p>
-        Product Name: <input name="productName" value="@ViewBag.ProductName" />
-        <input type="submit" value="Filter" />
+        <input name="productName" placeholder="productName" value="@ViewBag.ProductName" align="center"/>
+        <input type="submit" value="Search Product" class="btn btn-default btn-sm"/>
+        <span class="glyphicon glyphicon-search"></span>
     </p>
 </form>
 
@@ -64,11 +65,11 @@
                 </td>
 
                 <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductID">Reset Stock</a>
-                </td>
-             
-                 
-            </tr>
+               <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("Edit", "Owner", new { id = item.ProductID })";'>
+               <span class="glyphicon glyphicon-refresh"></span> Reset Stock
+               </button>                
+               </td>
+         </tr>
         
         }
     </tbody>
@@ -80,4 +81,13 @@
     background-color: teal;
     border-color: #ccc;
 }
+
+
+h1{
+    color: #008080;
+    text-align:center;
+    } 
 </style>
+
+
+

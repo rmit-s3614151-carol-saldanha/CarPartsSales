@@ -15,7 +15,6 @@ using Microsoft.AspNetCore.Http;
 
 namespace OAuthExample.Controllers
 {
-    [Authorize(Roles = Constants.CustomerRole)]
     public class CustomerController : Controller
     {
         private readonly Assignment2Context _context;

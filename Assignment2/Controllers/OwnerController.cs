@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using OAuthExample.Models.OwnerInventory;
+using OAuthExample.Models;
 using OAuthExample.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace OAuthExample.Controllers
 {
-    [Authorize(Roles = Constants.Owner)]
+    
     public class OwnerController : Controller
     {
         private readonly Assignment2Context _context;
