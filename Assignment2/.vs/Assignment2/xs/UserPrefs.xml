@@ -1,22 +1,20 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/_ViewImports.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/OwnerController.cs">
     <Files>
-      <File FileName="Controllers/OwnerController.cs" Line="219" Column="62" />
-      <File FileName="Data/Assignment2Context.cs" Line="5" Column="1" />
-      <File FileName="Data/SeedData.cs" Line="9" Column="1" />
-      <File FileName="Views/Owner/Delete.cshtml" Line="28" Column="29" />
-      <File FileName="Views/Owner/Edit.cshtml" Line="1" Column="8" />
-      <File FileName="Views/Owner/StockRequest.cshtml" Line="34" Column="23" />
-      <File FileName="Views/Owner/DeleteConfirmed.cshtml" Line="11" Column="3" />
-      <File FileName="Views/Franchise/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Owner/Owner.cshtml" Line="46" Column="12" />
-      <File FileName="Views/Franchise/NewInventory.cshtml" Line="1" Column="1" />
-      <File FileName="Views/_ViewImports.cshtml" Line="4" Column="1" />
+      <File FileName="Views/Franchise/NewInventory.cshtml" Line="1" Column="20" />
+      <File FileName="Controllers/FranchiseController.cs" Line="66" Column="10" />
+      <File FileName="Views/Owner/Sidebar.cshtml" Line="59" Column="8" />
+      <File FileName="Views/Owner/StockRequest.cshtml" Line="86" Column="1" />
+      <File FileName="Views/Owner/Owner.cshtml" Line="71" Column="31" />
+      <File FileName="Views/Owner/Edit.cshtml" Line="29" Column="5" />
+      <File FileName="Controllers/OwnerController.cs" Line="56" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/carol/Documents/WDT/Assignment2/Assignment2/Controllers/FranchiseController.cs" relfile="Controllers/FranchiseController.cs" line="60" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
