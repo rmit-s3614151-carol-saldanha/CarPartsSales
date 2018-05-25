@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OAuthExample.Models;
-using OAuthExample.Models.OwnerInventory;
 using OAuthExample.Models.ShoppingCartViewModels;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace OAuthExample.Data
 {
-    public class Assignment2Context : DbContext
+    public class Assignment2Context : IdentityDbContext<ApplicationUser>
     {
       
         public DbSet<Cart> ShoppingCartItems { get; set; }
@@ -23,6 +23,8 @@ namespace OAuthExample.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<StoreInventory>().HasKey(x => new { x.StoreID, x.ProductID });
             modelBuilder.Entity<OrderHistory>().HasKey(x => new { x.ReceiptID, x.ProductName, x.StoreName });
 

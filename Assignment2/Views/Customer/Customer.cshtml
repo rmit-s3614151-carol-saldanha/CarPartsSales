@@ -81,11 +81,17 @@
                      <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
                      </button>
                 </td>
+             
              </tr>
+         
         }
     </tbody>
+    
 </table>
+
+
 @{
+
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }

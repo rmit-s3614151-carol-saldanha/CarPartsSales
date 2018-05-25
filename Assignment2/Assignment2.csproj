@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.1" />
     <PackageReference Include="netfx-System.ServiceProvider" Version="1.2.1" />
     <PackageReference Include="ServiceProviderExtensions" Version="1.0.0" />
+    <PackageReference Include="Stripe.net" Version="16.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,8 +27,6 @@
 
   <ItemGroup>
     <Compile Remove="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
-    <Compile Remove="Migrations\Assignment2ContextModelSnapshot.cs" />
-    <Compile Remove="Data\Migrations\Assignment2ContextModelSnapshot.cs" />
     <Compile Remove="Utility\ShoppingList.cs" />
     <Compile Remove="Data\DatabaseContext.cs" />
   </ItemGroup>
@@ -36,14 +35,13 @@
     <Content Remove="Views\Owner\ResetStock.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Migrations\Assignment2ContextModelSnapshot.cs" />
-    <Content Include="Data\Migrations\Assignment2ContextModelSnapshot.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Views\Owner\" />
     <Folder Include="Models\ShoppingCartViewModels\" />
     <Folder Include="Models\Interfaces\" />
     <Folder Include="Models\Repositories\" />
     <Folder Include="Views\ShoppingCart\" />
+    <Folder Include="Views\Checkout\" />
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 </Project>

@@ -1,13 +1,22 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Owner/Dashboard.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_UserManagerPartial.cshtml">
     <Files>
-      <File FileName="Views/Owner/DisplayRequests.cshtml" Line="1" Column="20" />
-      <File FileName="Views/Owner/Owner.cshtml" Line="83" Column="9" />
-      <File FileName="Controllers/OwnerController.cs" Line="146" Column="46" />
-      <File FileName="Views/Customer/Customer.cshtml" Line="114" Column="1" />
-      <File FileName="Views/Owner/Edit.cshtml" Line="58" Column="9" />
-      <File FileName="Views/Owner/Delete.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Owner/Dashboard.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Checkout/Index.cshtml" Line="4" Column="24" />
+      <File FileName="Views/Checkout/Charge.cshtml" Line="1" Column="70" />
+      <File FileName="Views/ShoppingCart/Cart.cshtml" Line="59" Column="163" />
+      <File FileName="Controllers/CheckoutController.cs" Line="20" Column="3" />
+      <File FileName="Models/StripeSettings.cs" Line="2" Column="11" />
+      <File FileName="Controllers/CustomerController.cs" Line="92" Column="8" />
+      <File FileName="Controllers/HomeController.cs" Line="11" Column="18" />
+      <File FileName="Controllers/AccountController.cs" Line="8" Column="1" />
+      <File FileName="Data/Assignment2Context.cs" Line="26" Column="48" />
+      <File FileName="Models/ShoppingCartViewModels/Cart.cs" Line="1" Column="1" />
+      <File FileName="Views/_ViewImports.cshtml" Line="12" Column="8" />
+      <File FileName="Startup.cs" Line="48" Column="13" />
+      <File FileName="Data/SeedData.cs" Line="38" Column="18" />
+      <File FileName="Program.cs" Line="23" Column="18" />
+      <File FileName="Models/StoreInventory.cs" Line="1" Column="1" />
+      <File FileName="Views/Shared/_UserManagerPartial.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

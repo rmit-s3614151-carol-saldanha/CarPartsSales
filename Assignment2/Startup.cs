@@ -10,6 +10,8 @@ using OAuthExample.Services;
 using Microsoft.AspNetCore.Http;
 using OAuthExample.Models.Interfaces;
 using OAuthExample.Data.Repositories;
+using Stripe;
+using Assignment2.Models;
 
 namespace OAuthExample
 {
@@ -26,19 +28,23 @@ namespace OAuthExample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["SecretKey"]);
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+
+
+            //services.AddDbContext<ApplicationDbContext>(options =>
+                //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
             services.AddDbContext<Assignment2Context>(options =>
-                                                      options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.Password.RequiredLength = 3;
                 options.Password.RequireDigit = options.Password.RequireNonAlphanumeric =
                     options.Password.RequireUppercase = options.Password.RequireLowercase = false;
-            }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+            }).AddEntityFrameworkStores<Assignment2Context>().AddDefaultTokenProviders();
 
             services.AddAuthentication().AddGoogle(googleOptions =>
             {
