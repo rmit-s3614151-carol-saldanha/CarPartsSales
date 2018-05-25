@@ -33,6 +33,7 @@
   <ItemGroup>
     <Content Remove="Views\Customer\Cart.cshtml" />
     <Content Remove="Views\Owner\ResetStock.cshtml" />
+    <Content Remove="Views\Owner\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Owner\" />
