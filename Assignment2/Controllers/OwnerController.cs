@@ -214,12 +214,12 @@ namespace OAuthExample.Controllers
         }
 
         // POST: Owner/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int? id)
         {
-            var ownerInventory = await _context.OwnerInventory.SingleOrDefaultAsync(m => m.ProductID == id);
-            _context.OwnerInventory.Remove(ownerInventory);
+            var ownerInventory = await _context.StockRequests.SingleOrDefaultAsync(m => m.ProductID == id);
+            _context.StockRequests.Remove(ownerInventory);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Owner));
         }

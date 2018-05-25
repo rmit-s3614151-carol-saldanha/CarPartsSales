@@ -7,7 +7,7 @@
 }
 
 <center>
-     <h2> Stock Requests </h2> 
+     <h1> Stock Requests </h1> 
 </center>
 <table id="table">
     <thead>
@@ -15,18 +15,28 @@
             <th>
                 @Html.DisplayNameFor(model => model.ProductID)
             </th>
+             <th></th>
+           
               <th>
                 @Html.DisplayNameFor(model => model.Product.Name)
             </th>
+             <th></th>
+            
              <th>
                 @Html.DisplayNameFor(model => model.Quantity)
             </th>
+             <th></th>
                <th>
                 @Html.DisplayNameFor(model => model.StoreID)
             </th>
+             <th></th>
+             <th></th>
+              <th></th>
             <th>
                 @Html.DisplayNameFor(model => model.Product.Image)
             </th>
+             <th></th>
+             <th></th>
            
         </tr>
     </thead>
@@ -36,28 +46,53 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Product.ProductID)
             </td>
+             <th></th>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.Product.Name)
             </td>
+            
+             <th></th>
+             <th></th>
             <td>
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
+             <th></th>
               <td>
                 @Html.DisplayFor(modelItem => item.StoreID)
             </td>
+             <th></th>
+            
             <td>
+                
                 <img src="@Url.Content(item.Product.Image)" height="100" width="100" />
 
             </td>
+              <th></th>
+              <th></th>
+             <th></th>
             <td>
 
-             <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("Delete", "Owner", new { id = item.Product.ProductID })";'>
+             <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("DeleteConfirmed", "Owner", new { id = item.Product.ProductID })";'>
                      <span class="glyphicon glyphicon-trash"></span> Delete
                      </button>
+
             </td>
-              
         </tr>
 }
       
     </tbody>
 </table>
+<style>
+    .btn-default {
+    color: beige;
+    background-color: teal;
+    border-color: #ccc;
+}
+
+
+h1{
+    color: #008080;
+    text-align:center;
+    } 
+</style>
