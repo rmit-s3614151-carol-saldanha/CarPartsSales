@@ -64,7 +64,11 @@
                 <img src="@Url.Content(item.Product.Image)" height="100" width="100" />
                 </td>
 
-           
+                <td>
+               <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("Edit", "Owner", new { id = item.ProductID })";'>
+               <span class="glyphicon glyphicon-refresh"></span> Reset Stock
+               </button>                
+               </td>
          </tr>
 
         

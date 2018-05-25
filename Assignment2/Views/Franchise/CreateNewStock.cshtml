@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Assignment2.Models.StoreInventory>
+﻿@model IEnumerable<StoreInventory>
 
 @{
     ViewData["Title"] = "Store Inventory";
@@ -17,6 +17,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Store)
             </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Product.Image)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -30,8 +33,12 @@
                 @Html.DisplayFor(modelItem => item.Product.ProductID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Store.StoreID)
+                @Html.DisplayFor(modelItem => item.StoreID)
             </td>
+            <td>
+                <img src="@Url.Content(item.Product.Image)" height="100" width="100" />
+            </td>
+            
             <td>
                 @Html.ActionLink("Edit", "Edit", new {  id=item.ProductID  }) 
             </td>

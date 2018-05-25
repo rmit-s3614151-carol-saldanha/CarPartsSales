@@ -16,13 +16,13 @@
 }
 else
 {
-     if ( this.User.IsInRole("Owner") )
+     if ( this.User.IsInRole("Customer") )
      {
          <ul class="nav navbar-nav">
             <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
             <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
             <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-            <li><a asp-area="" asp-controller="Owner" asp-action="Owner">Owner</a></li>
+            <li><a asp-area="" asp-controller="Owner" asp-action="Sidebar">Owner</a></li>
          </ul>
      }
      else if (this.User.IsInRole("Franchise") )

@@ -1,22 +1,16 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_UserManagerPartial.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Franchise/Edit.cshtml">
     <Files>
-      <File FileName="Views/Checkout/Index.cshtml" Line="4" Column="24" />
-      <File FileName="Views/Checkout/Charge.cshtml" Line="1" Column="70" />
-      <File FileName="Views/ShoppingCart/Cart.cshtml" Line="59" Column="163" />
-      <File FileName="Controllers/CheckoutController.cs" Line="20" Column="3" />
-      <File FileName="Models/StripeSettings.cs" Line="2" Column="11" />
-      <File FileName="Controllers/CustomerController.cs" Line="92" Column="8" />
-      <File FileName="Controllers/HomeController.cs" Line="11" Column="18" />
-      <File FileName="Controllers/AccountController.cs" Line="8" Column="1" />
-      <File FileName="Data/Assignment2Context.cs" Line="26" Column="48" />
-      <File FileName="Models/ShoppingCartViewModels/Cart.cs" Line="1" Column="1" />
-      <File FileName="Views/_ViewImports.cshtml" Line="12" Column="8" />
-      <File FileName="Startup.cs" Line="48" Column="13" />
-      <File FileName="Data/SeedData.cs" Line="38" Column="18" />
-      <File FileName="Program.cs" Line="23" Column="18" />
-      <File FileName="Models/StoreInventory.cs" Line="1" Column="1" />
-      <File FileName="Views/Shared/_UserManagerPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Controllers/FranchiseController.cs" Line="43" Column="56" />
+      <File FileName="Views/Franchise/DisplayStock.cshtml" Line="34" Column="12" />
+      <File FileName="Views/Owner/Owner.cshtml" Line="64" Column="39" />
+      <File FileName="Views/Owner/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="Views/Franchise/Edit.cshtml" Line="1" Column="25" />
+      <File FileName="Views/Franchise/Details.cshtml" Line="1" Column="1" />
+      <File FileName="Views/_ViewImports.cshtml" Line="12" Column="1" />
+      <File FileName="Views/Franchise/CreateNewStock.cshtml" Line="38" Column="13" />
+      <File FileName="Models/StoreInventory.cs" Line="4" Column="11" />
+      <File FileName="Data/Constants.cs" Line="1" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
