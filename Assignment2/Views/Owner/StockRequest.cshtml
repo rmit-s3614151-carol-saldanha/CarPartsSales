@@ -49,7 +49,15 @@
                 <img src="@Url.Content(item.Product.Image)" height="100" width="100" />
 
             </td>
+            <td>
+
+             <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("Delete", "Owner", new { id = item.Product.ProductID })";'>
+                     <span class="glyphicon glyphicon-trash"></span> Delete
+                     </button>
+            </td>
+              
         </tr>
 }
+      
     </tbody>
 </table>
