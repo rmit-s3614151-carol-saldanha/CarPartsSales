@@ -6,9 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using OAuthExample.Models;
-using OAuthExample.Data;
 using Microsoft.EntityFrameworkCore;
 using OAuthExample.Utility;
 using Microsoft.AspNetCore.Http;
@@ -27,10 +25,7 @@ namespace OAuthExample.Controllers
         public async Task<IActionResult> Home(string productName)
         {
 
-
-
-            // Passing a List<OwnerInventory> model object to the View.
-            return View();
+                   return View();
         }
 
         public async Task<IActionResult> Customer(
@@ -57,7 +52,6 @@ namespace OAuthExample.Controllers
                                 .Include(x => x.Product)
                                 .Include(x => x.Store)
                                 .Select(x => x);
-            //var storeID = _context.Store.Where(x=>x.Name.Contains("bourne")).Select(x=>x.StoreID);
 
 
             if (!string.IsNullOrWhiteSpace(searchString))

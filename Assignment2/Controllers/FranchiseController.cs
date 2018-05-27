@@ -29,7 +29,7 @@ namespace OAuthExample.Controllers
 
        
         // GET: Franchise
-        public async Task<IActionResult> CreateNewStock()
+        public async Task<IActionResult> StockRequest()
         {
             var user = await _userManager.GetUserAsync(User);
             var query = _context.StoreInventory
@@ -52,6 +52,14 @@ namespace OAuthExample.Controllers
             return View(await query.ToListAsync());
         }
 
+
+        public async Task<IActionResult> Sidebar(string productName)
+        {
+
+            // Passing a List<OwnerInventory> model object to the View.
+            return View();
+        }
+
         public async Task<IActionResult> NewInventory()
         {
 
@@ -60,7 +68,7 @@ namespace OAuthExample.Controllers
             ViewBag.myData = _context.Stores.Where(x => x.StoreID == user.StoreID).Select(x => x.Name).First();
 
             var storeProduct = _context.StoreInventory.Where(x => x.StoreID == user.StoreID).Select(x => x.Product).ToList();
-            var newItems = _context.OwnerInventory.Select(x => x.Product).ToList().Except(storeProduct).ToList();
+            var newItems = _context.OwnerInventory.Select(x => x.Product).ToList();
 
             return View(newItems);
         }

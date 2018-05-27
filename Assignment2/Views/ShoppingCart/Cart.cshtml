@@ -2,7 +2,7 @@
 
 
 <div class="row checkoutForm">
-    <h2>Your shopping cart</h2>
+    <h1>Your shopping cart</h1>
     <h4>Here are the products in your shopping cart.</h4>
     <table class="table table-bordered table-striped">
         <thead>
@@ -34,14 +34,10 @@
                         @((line.Product.Price).ToString("c"))
                     </td>
                     <td>
-                     <button type="button" class="glyphicon glyphicon-remove text-danger remove" onclick='window.location = "@Url.Action("RemoveFromShoppingCart", "ShoppingCart")";'>
+                     <button type="button" class="glyphicon glyphicon-remove text-danger remove" onclick='window.location = "@Url.Action("RemoveFromShoppingCart", "ShoppingCart",new { productId = line.Product.ProductID })";'>
                      </button>
                     </td>
-
-
-
-                
-                </tr>
+             </tr>
             }
         </tbody>
         <tfoot>
@@ -52,11 +48,12 @@
                 </td>
             </tr>
         </tfoot>
+
     </table>
 
-    <div class="text-right">
+                <div class="text-right">
         <div class="btn-group " >
-            <button type="button" class="btn btn-default" asp-controller="Order" asp-action="Checkout" onclick='window.location = "@Url.Action("Index", "Checkout")";'>
+            <button type="button" class="btn btn-default" asp-controller="Order" asp-action="Checkout" onclick='window.location = "@Url.Action("Index", "Checkout", new { total = @Model.ShoppingCartTotal} )";'>
                     <span class="glyphicon glyphicon-check"></span> Checkout
                      </button>
             <button type="button" class="btn btn-default" onclick='window.location = "@Url.Action("Customer", "Customer")";'>
@@ -72,4 +69,9 @@
     background-color: teal;
     border-color: #ccc;
 }
+
+    h1,h4{
+    color: #008080;
+    text-align:center;
+    } 
 </style>

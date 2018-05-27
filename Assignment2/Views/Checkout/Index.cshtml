@@ -1,15 +1,19 @@
 ﻿@using Microsoft.Extensions.Options
-@inject IOptions<StripeSettings> Stripe
+@model ShoppingCartViewModel
+
 
 <form action="/Checkout/Charge" method="POST">
   <article>
-    <label>Amount: $5.00</label>
+
   </article>
   <script src="//checkout.stripe.com/v2/checkout.js"
           class="stripe-button"
-          data-key="@Stripe.Value.PublishableKey"
+
+          data-key="pk_test_wsBs97diADKDvCl12yHJAtPE"
           data-locale="auto"
           data-description="Sample Charge"
-          data-amount="500">
+       
+         
+          data-amount="@ViewBag.Amount*100">
   </script>
 </form>

@@ -35,6 +35,8 @@ namespace OAuthExample.Controllers
 
                 // Storing the search into ViewBag to populate the textbox with the same value for convenience.
                 ViewBag.ProductName = productName;
+
+
             }
 
             // Adding an order by to the query for the Product name.
@@ -234,10 +236,7 @@ namespace OAuthExample.Controllers
         public async Task<IActionResult> StockReq(string productName)
         {
 
-
-
-            // Passing a List<OwnerInventory> model object to the View.
-            return View();
+                 return View();
         }
 
         private bool checkIfProdExists(int id)

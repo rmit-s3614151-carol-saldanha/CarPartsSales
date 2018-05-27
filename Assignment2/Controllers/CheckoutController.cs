@@ -11,14 +11,12 @@ namespace OAuthExample.Controllers
 {
     public class CheckoutController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
-        public async Task<IActionResult> Index()
+        double total1;
+        //This class makes use of Stripe API for Checkout
+        public async Task<IActionResult> Index(double total)
         {
-
+            total1 = total*100;
+            ViewBag.Amount = total1;
             return View();
         }
 
@@ -54,12 +52,12 @@ namespace OAuthExample.Controllers
 
             var charge = charges.Create(new StripeChargeCreateOptions
             {
-                Amount = 500,
+                Amount = 10,
                 Description = "Sample Charge",
-                Currency = "usd",
+                Currency = "aud",
                 CustomerId = customer.Id
             });
-
+            ViewBag.Amount = total1*100;
             return View();
         }
     }

@@ -47,7 +47,7 @@ namespace OAuthExample.Controllers
 
             if (selectedProduct != null)
             {
-                _shoppingCart.AddToCart(selectedProduct, 2);
+                _shoppingCart.AddToCart(selectedProduct, 1);
             }
             return RedirectToAction("Cart");
         }

@@ -12,6 +12,7 @@ using OAuthExample.Models.Interfaces;
 using OAuthExample.Data.Repositories;
 using Stripe;
 using Assignment2.Models;
+using Assignment2.Models.StripeSettings;
 
 namespace OAuthExample
 {
@@ -28,14 +29,9 @@ namespace OAuthExample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            StripeConfiguration.SetApiKey(Configuration.GetSection("Stripe")["SecretKey"]);
 
-            //services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
+            services.Configure<StripeSettings>(Configuration.GetSection("Stripe"));
 
-
-            //services.AddDbContext<ApplicationDbContext>(options =>
-                //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
             services.AddDbContext<Assignment2Context>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -51,10 +47,6 @@ namespace OAuthExample
                 googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
                 googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
             });
-
-            //services.AddIdentity<ApplicationUser, IdentityRole>()
-            //.AddEntityFrameworkStores<ApplicationDbContext>()
-            //.AddDefaultTokenProviders();
 
             services.AddAuthentication().AddFacebook(facebookOptions =>
             {
@@ -101,6 +93,8 @@ namespace OAuthExample
             app.UseAuthentication();
 
             app.UseSession();
+            StripeConfiguration.SetApiKey("sk_test_pbL1yHvpfznS37w4uao7jQwv");
+
 
             app.UseMvc(routes =>
             {

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Reset Product</h2>
+<h1>Reset Product</h1>
 
 
     <hr />
@@ -26,7 +26,7 @@
        
 
     </dl>
-
+  
 
 <hr />
 <div class="row">
@@ -46,9 +46,9 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+   <button type="button"  class="btn btn-default" onclick='window.location = "@Url.Action("Sidebar", "Owner")";'>
+                     <span class="glyphicon glyphicon-home"></span> Back to Product List
+                     </button>  
 
 <style>
     .btn-default {
@@ -56,6 +56,10 @@
     background-color: teal;
     border-color: #ccc;
 }
+   h1{
+    color: #008080;
+    text-align:center;
+    } 
 </style>
 
 @section Scripts {

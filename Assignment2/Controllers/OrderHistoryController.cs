@@ -54,8 +54,6 @@ namespace Assignment2.Controllers
             {
                 Cart cart = HttpContext.Session.Get<Cart>(session);
 
-                //Cart shopping = HttpContext.Session.Get<Cart>(session);
-
                 shoppingList.Add(cart);
             }
 
@@ -68,10 +66,7 @@ namespace Assignment2.Controllers
                 order.Image = cart.Product.Image;
                 order.Quantity = (int)cart.Amount;
                  _context.Add(order);
-               
-
-                // var storeContext = _context.StoreInventory.Where(x => x.ProductID == productID).Select(x => x).First();
-                // storeContext.StockLevel += stockRequestToUpdate.Quantity;
+              
                 await _context.SaveChangesAsync();
             }
 
