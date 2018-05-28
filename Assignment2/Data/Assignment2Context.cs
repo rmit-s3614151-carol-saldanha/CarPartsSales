@@ -16,6 +16,8 @@ namespace OAuthExample.Data
         public DbSet<StoreInventory> StoreInventory { get; set; }
         public DbSet<CustomerOrder> CustomerOrder { get; set; }
         public DbSet<OrderHistory> OrderHistory { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
 
         public Assignment2Context(DbContextOptions<Assignment2Context> options) : base(options)

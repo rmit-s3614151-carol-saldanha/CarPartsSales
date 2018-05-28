@@ -11,7 +11,7 @@ using System;
 namespace Assignment2.Migrations
 {
     [DbContext(typeof(Assignment2Context))]
-    [Migration("20180525004606_Initial")]
+    [Migration("20180528012950_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -198,6 +198,75 @@ namespace Assignment2.Migrations
                     b.ToTable("CustomerOrder");
                 });
 
+            modelBuilder.Entity("OAuthExample.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("AddressLine1")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.Property<string>("AddressLine2");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.Property<DateTime>("OrderPlaced");
+
+                    b.Property<decimal>("OrderTotal");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(25);
+
+                    b.Property<string>("State")
+                        .HasMaxLength(10);
+
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasMaxLength(10);
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
+                });
+
+            modelBuilder.Entity("OAuthExample.Models.OrderDetail", b =>
+                {
+                    b.Property<int>("OrderDetailId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<double>("Amount");
+
+                    b.Property<int>("OrderId");
+
+                    b.Property<double>("Price");
+
+                    b.Property<int>("ProductId");
+
+                    b.HasKey("OrderDetailId");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("OrderDetails");
+                });
+
             modelBuilder.Entity("OAuthExample.Models.OrderHistory", b =>
                 {
                     b.Property<int>("ReceiptID");
@@ -215,6 +284,17 @@ namespace Assignment2.Migrations
                     b.HasKey("ReceiptID", "ProductName", "StoreName");
 
                     b.ToTable("OrderHistory");
+                });
+
+            modelBuilder.Entity("OAuthExample.Models.OwnerInventory", b =>
+                {
+                    b.Property<int>("ProductID");
+
+                    b.Property<int>("StockLevel");
+
+                    b.HasKey("ProductID");
+
+                    b.ToTable("OwnerInventory");
                 });
 
             modelBuilder.Entity("OAuthExample.Models.Product", b =>
@@ -298,17 +378,6 @@ namespace Assignment2.Migrations
                     b.ToTable("StoreInventory");
                 });
 
-            modelBuilder.Entity("OAuthExample.OwnerInventory", b =>
-                {
-                    b.Property<int>("ProductID");
-
-                    b.Property<int>("StockLevel");
-
-                    b.HasKey("ProductID");
-
-                    b.ToTable("OwnerInventory");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole")
@@ -361,11 +430,32 @@ namespace Assignment2.Migrations
                         .HasForeignKey("StoreID");
                 });
 
+            modelBuilder.Entity("OAuthExample.Models.OrderDetail", b =>
+                {
+                    b.HasOne("OAuthExample.Models.Order", "Order")
+                        .WithMany("OrderLines")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("OAuthExample.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("OAuthExample.Models.OrderHistory", b =>
                 {
                     b.HasOne("OAuthExample.Models.CustomerOrder", "CustomerOrder")
                         .WithMany("OrderHistories")
                         .HasForeignKey("ReceiptID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("OAuthExample.Models.OwnerInventory", b =>
+                {
+                    b.HasOne("OAuthExample.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -399,14 +489,6 @@ namespace Assignment2.Migrations
                     b.HasOne("OAuthExample.Models.Store", "Store")
                         .WithMany("StoreInventory")
                         .HasForeignKey("StoreID")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("OAuthExample.OwnerInventory", b =>
-                {
-                    b.HasOne("OAuthExample.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

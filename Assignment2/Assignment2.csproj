@@ -29,6 +29,8 @@
     <Compile Remove="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
     <Compile Remove="Utility\ShoppingList.cs" />
     <Compile Remove="Data\DatabaseContext.cs" />
+    <Compile Remove="Migrations\20180525004606_Initial.cs" />
+    <Compile Remove="Views\Order.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\Customer\Cart.cshtml" />
@@ -45,5 +47,6 @@
     <Folder Include="Views\Checkout\" />
     <Folder Include="Data\Migrations\" />
     <Folder Include="Migrations\" />
+    <Folder Include="Views\Order\" />
   </ItemGroup>
 </Project>
