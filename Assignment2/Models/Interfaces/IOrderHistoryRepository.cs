@@ -6,9 +6,9 @@ namespace Assignment2.Models.Interfaces
 {
     public class IOrderHistoryRepository
     {
-       
-            public IEnumerable<CustomerOrder> customerOrders { get; set; }
-            public IEnumerable<OrderHistory> orderHistories { get; set; }
+
+        public IEnumerable<Order> orders { get; set; }
+        public IEnumerable<OrderDetail> orderDetails { get; set; }
 
     }
 }

@@ -6,10 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using OAuthExample.Models;
 using OAuthExample.Models.ShoppingCartViewModels;
-using OAuthExample.Data;
 using Microsoft.EntityFrameworkCore;
 using OAuthExample.Utility;
 using Microsoft.AspNetCore.Http;
@@ -28,16 +26,16 @@ namespace Assignment2.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<OrderHistory>> Get()
+        public async Task<IEnumerable<OrderDetail>> Get()
         {
-            return _context.OrderHistory.ToList<OrderHistory>();
+            return _context.OrderDetails.ToList<OrderDetail>();
         }
 
 
         [HttpGet("{id}")]
-        public async Task<IEnumerable<OrderHistory>> Get(int id){
+        public async Task<IEnumerable<OrderDetail>> Get(int id){
 
-            return _context.OrderHistory.Where(x => x.ReceiptID == id).ToList<OrderHistory>();
+            return _context.OrderDetails.Where(x => x.OrderDetailId == id).ToList<OrderDetail>();
         }
     }
 }

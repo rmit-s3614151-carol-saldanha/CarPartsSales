@@ -6,14 +6,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using OAuthExample.Models;
 using OAuthExample.Models.ShoppingCartViewModels;
-using OAuthExample.Data;
 using Microsoft.EntityFrameworkCore;
 using OAuthExample.Utility;
 using Microsoft.AspNetCore.Http;
-using OAuthExample.Models;
 
 
 

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using OAuthExample.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using OAuthExample.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace OAuthExample.Controllers

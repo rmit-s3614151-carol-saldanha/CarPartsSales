@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{FFC29DE1-395B-4D72-A7E0-E4938C418E8A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Repositories/OrderRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Order/OrderHistory.cshtml">
     <Files>
-      <File FileName="Views/Order/OrderHistory.cshtml" Line="4" Column="82" />
-      <File FileName="Controllers/OrderController.cs" Line="36" Column="42" />
-      <File FileName="Controllers/OrderHistoryAPIController.cs" Line="1" Column="1" />
-      <File FileName="Data/Assignment2Context.cs" Line="20" Column="35" />
-      <File FileName="Models/Repositories/OrderRepository.cs" Line="41" Column="55" />
+      <File FileName="Views/Customer/Customer.cshtml" Line="34" Column="146" />
+      <File FileName="Controllers/CustomerController.cs" Line="36" Column="35" />
+      <File FileName="Views/ShoppingCart/Cart.cshtml" Line="66" Column="15" />
+      <File FileName="Views/Checkout/Charge.cshtml" Line="4" Column="1" />
+      <File FileName="Views/Checkout/OrderHistory.cshtml" Line="93" Column="7" />
+      <File FileName="Views/Order/OrderHistory.cshtml" Line="100" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -34,7 +34,8 @@ namespace OAuthExample.Controllers
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["StoreSortParm"] = sortOrder == "Store" ? "store_desc" : "Store";
+
+            //ViewData["StoreSortParm"] = sortOrder == "Store" ? "store_desc" : "Store";
 
             if (searchString != null)
             {
@@ -63,20 +64,17 @@ namespace OAuthExample.Controllers
             switch (sortOrder)
             {
                 case "name_desc":
-                    query = query.OrderByDescending(s => s.Product.Name);
+                    query = query.OrderByDescending(s => s.Product.Price);
                     break;
-                case "Store":
-                    query = query.OrderBy(s => s.Store.Name);
-                    break;
-                case "store_desc":
-                    query = query.OrderByDescending(s => s.Store.Name);
-                    break;
+
+             
+               
                 default:
-                    query = query.OrderBy(s => s.Product.Name);
+                    query = query.OrderBy(s => s.Product.Price);
                     break;
             }
 
-            int pageSize = 3;
+            int pageSize = 5;
 
             return View(await PaginatedList<StoreInventory>
                         .CreateAsync(query.AsNoTracking(), page ?? 1, pageSize));

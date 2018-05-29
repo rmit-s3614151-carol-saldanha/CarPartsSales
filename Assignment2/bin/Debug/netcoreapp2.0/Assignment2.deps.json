@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "b4044169b0c2b857657d8fbb9b8ac90c13f0a177"
+    "signature": "865661e8d4d74d8795c6b81e029d729e5cfeb57a"
   },
   "compilationOptions": {
     "defines": [
@@ -29,6 +29,7 @@
           "Microsoft.Extensions.Configuration.UserSecrets": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.3",
+          "NotFoundMvc": "1.5.0",
           "ServiceProviderExtensions": "1.0.0",
           "Stripe.net": "16.3.0",
           "netfx-System.ServiceProvider": "1.2.1"
@@ -125,6 +126,44 @@
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Mvc/3.0.20105.1": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "1.0.20105.408",
+          "Microsoft.AspNet.WebPages": "1.0.20105.408"
+        },
+        "runtime": {
+          "lib/net40/System.Web.Mvc.dll": {}
+        },
+        "compile": {
+          "lib/net40/System.Web.Mvc.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Razor/1.0.20105.408": {
+        "runtime": {
+          "lib/net40/System.Web.Razor.dll": {}
+        },
+        "compile": {
+          "lib/net40/System.Web.Razor.dll": {}
+        }
+      },
+      "Microsoft.AspNet.WebPages/1.0.20105.408": {
+        "dependencies": {
+          "Microsoft.AspNet.Razor": "1.0.20105.408",
+          "Microsoft.Web.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "lib/net40/System.Web.Helpers.dll": {},
+          "lib/net40/System.Web.WebPages.Deployment.dll": {},
+          "lib/net40/System.Web.WebPages.Razor.dll": {},
+          "lib/net40/System.Web.WebPages.dll": {}
+        },
+        "compile": {
+          "lib/net40/System.Web.Helpers.dll": {},
+          "lib/net40/System.Web.WebPages.Deployment.dll": {},
+          "lib/net40/System.Web.WebPages.Razor.dll": {},
+          "lib/net40/System.Web.WebPages.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.0.2": {
@@ -2422,6 +2461,14 @@
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
         }
       },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        },
+        "compile": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {}
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -2496,6 +2543,17 @@
         },
         "compile": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "NotFoundMvc/1.5.0": {
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "3.0.20105.1"
+        },
+        "runtime": {
+          "lib/net40/NotFoundMvc.dll": {}
+        },
+        "compile": {
+          "lib/net40/NotFoundMvc.dll": {}
         }
       },
       "NuGet.Frameworks/4.0.0": {
@@ -4294,6 +4352,27 @@
       "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
       "hashPath": "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512"
     },
+    "Microsoft.AspNet.Mvc/3.0.20105.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CjEb1ExBqe3DceDCg4EhdimdoDTMuBOmA490lRKgl3EN8L4G8+lBRHDF7Ho8QkFsY7C5Y4pTfqhD7Zl8VPOtWQ==",
+      "path": "microsoft.aspnet.mvc/3.0.20105.1",
+      "hashPath": "microsoft.aspnet.mvc.3.0.20105.1.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Razor/1.0.20105.408": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vRmwL/G31Xc9DusVQUJXmDpTYEVB7xUoIjKqCyuOHrCyG9kzM66MadNjdPLzplSsDoWqiae35US8XiiI3e6SBw==",
+      "path": "microsoft.aspnet.razor/1.0.20105.408",
+      "hashPath": "microsoft.aspnet.razor.1.0.20105.408.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebPages/1.0.20105.408": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-da1//kx0b6GXJG6V8vGl7PmvhPJE/aNs2mK0QJ9bojgy059BDdYhmAwpTT1ucDgbImbFDdmNGi/XJj2SU0QJeA==",
+      "path": "microsoft.aspnet.webpages/1.0.20105.408",
+      "hashPath": "microsoft.aspnet.webpages.1.0.20105.408.nupkg.sha512"
+    },
     "Microsoft.AspNetCore/2.0.2": {
       "type": "package",
       "serviceable": true,
@@ -5456,6 +5535,13 @@
       "path": "microsoft.visualstudio.web.codegenerators.mvc/2.0.3",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.2.0.3.nupkg.sha512"
     },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5490,6 +5576,13 @@
       "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
+    },
+    "NotFoundMvc/1.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DXdxPLayF+1Uv1tLJNB166hE8DR7OJfg1KEQhIkC2wKl3KcIgJxGwPI6iK61koFp3xzdN6o4eC1fzYoE9mZCSw==",
+      "path": "notfoundmvc/1.5.0",
+      "hashPath": "notfoundmvc.1.5.0.nupkg.sha512"
     },
     "NuGet.Frameworks/4.0.0": {
       "type": "package",

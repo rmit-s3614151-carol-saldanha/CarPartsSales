@@ -20,17 +20,17 @@ namespace Assignment2.Controllers
             using (var client = new HttpClient())
             {
                 var result = await client.GetStringAsync("http://localhost:5000/api/orders");
-                viewModel.customerOrders = JsonConvert.DeserializeObject<List<CustomerOrder>>(result);
+                viewModel.orders = JsonConvert.DeserializeObject<List<Order>>(result);
 
             }
 
             if (id != null)
             {
-                ViewData["ReceiptID"] = id.Value;
+                ViewData["orderId"] = id.Value;
                 using (var client = new HttpClient())
                 {
                     var historyResult = await client.GetStringAsync("http://localhost:5000/api/orderhistory/" + id);
-                    viewModel.orderHistories = JsonConvert.DeserializeObject<List<OrderHistory>>(historyResult);
+                    viewModel.orderDetails = JsonConvert.DeserializeObject<List<OrderDetail>>(historyResult);
                 }
             }
 

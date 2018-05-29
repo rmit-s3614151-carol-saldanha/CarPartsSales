@@ -22,21 +22,21 @@
                 Product Id
             </th>
             <th>
-                <a asp-action="Customer" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Product Name</a>
+                Product Name
             </th>
             <th>
-                <a asp-action="Customer" asp-route-sortOrder="@ViewData["StoreSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Store Name</a>
+                Store Name
             </th>
             <th>
                 Available
             </th>
             <th>
-                Price
+              <a asp-action="Customer" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Price</a>
+
             </th>
-            <th>
-                Quantity
-            </th>
+          <th></th>
               <th>
+                
                 Image
            </th>
             <th></th>
@@ -64,10 +64,7 @@
                 </td>
                
                <td>
-               <form method="get">
-                    @Html.DropDownListFor(modelItem => item.StockLevel, Enumerable.Range(1, item.StockLevel).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }))
-
-               </form>
+   
 
                </td>
            

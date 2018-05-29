@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using OAuthExample.Models.Interfaces;
 using OAuthExample.Models.ShoppingCartViewModels;
 
-namespace DrinkAndGo.Controllers
+namespace OAuthExample.Controllers
 {
     public class OrderController : Controller
     {
@@ -25,28 +25,28 @@ namespace DrinkAndGo.Controllers
             _shoppingCart = shoppingCart;
         }
 
-        [Authorize]
-        public IActionResult Checkout()
+
+        public IActionResult OrderHistory()
         {
             return View();
         }
 
         [HttpPost]
-        [Authorize]
+
         public IActionResult OrderHistory(Order order)
         {
             var items = _shoppingCart.GetShoppingCartItems();
             _shoppingCart.ShoppingCartItems = items;
             if (_shoppingCart.ShoppingCartItems.Count == 0)
             {
-                ModelState.AddModelError("", "Your cart is empty, add some drinks first");
+                ModelState.AddModelError("", "Your cart is empty, add some products first");
             }
 
             if (ModelState.IsValid)
             {
                 _orderRepository.CreateOrder(order);
                 _shoppingCart.ClearCart();
-                return RedirectToAction("CheckoutComplete");
+                return View(order);
             }
 
             return View(order);

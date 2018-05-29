@@ -1,8 +1,7 @@
 ﻿@model Order
 
-
 <div class="row orderForm ">
-    <h1 class="text-center">You are just one step away from ordering your Product.</h1>
+    <h3 class="text-center">You are just one step away from ordering your Product.</h3>
 
     <form asp-action="OrderHistory" method="post" class="form-horizontal" role="form">
         <div class="form-group">
@@ -45,6 +44,14 @@
         </div>
 
         <div class="form-group">
+            <label asp-for="City" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
             <label asp-for="State" class="col-md-2 control-label"></label>
             <div class="col-md-5">
                 <input asp-for="State" class="form-control" />
@@ -75,26 +82,12 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
         </div>
-
- 
-    
-        <button type="button" class="btn btn-default btn-sm" onclick='window.location = "@Url.Action("AddToShoppingCart", "ShoppingCart" )";'>
-                     <span class="glyphicon glyphicon-shopping-cart"></span> Back to Cart
-                     </button>
-
+        <div class="form-group">
+            <div class="btn-group col-md-offset-2 col-md-8">
+                <input class="btn btn-success" type="submit" value="Complete order" />
+                @*<input class="btn btn-default" type="submit" value="Return " />*@
+            </div>
+        </div>
 
     </form>
 </div>
-
- <style>
-    .btn-default {
-    color: beige;
-    background-color: teal;
-    border-color: #ccc;
-}
-
-    h1,h4{
-    color: #008080;
-    text-align:center;
-    } 
-</style>

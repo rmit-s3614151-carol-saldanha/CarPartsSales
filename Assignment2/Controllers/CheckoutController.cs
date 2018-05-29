@@ -52,13 +52,15 @@ namespace OAuthExample.Controllers
 
             var charge = charges.Create(new StripeChargeCreateOptions
             {
-                Amount = 10,
+                Amount = 100,
                 Description = "Sample Charge",
-                Currency = "aud",
+                Currency = "usd",
                 CustomerId = customer.Id
             });
             ViewBag.Amount = total1*100;
             return View();
         }
+
+
     }
 }
